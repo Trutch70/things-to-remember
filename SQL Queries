@@ -1,0 +1,7 @@
+//Query used to filter a many-to-many association in a way to get only objects having all required relations.
+//Example based on recipe with recipe_tags
+ SELECT r.* FROM recipe r
+  INNER JOIN recipe_recipe_tag rrt ON r.id = rrt.recipe_id
+  INNER JOIN recipe_tag rt ON rrt.recipe_tag_id = rt.id
+  WHERE rt.name IN ('vegan','weight-loss')
+  GROUP by r.id HAVING COUNT(1) = 2;
