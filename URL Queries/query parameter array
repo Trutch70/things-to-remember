@@ -1,0 +1,3 @@
+//This sends an array of parameters with both specified values
+//Example based on recipes with recipeTags
+recipes?recipeTags.name[]=elo&recipeTags.name[]
