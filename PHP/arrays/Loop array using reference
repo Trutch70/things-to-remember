@@ -1,0 +1,3 @@
+foreach ($array as $id => &$row) {
+  //modifying $row here will modify the original $array content
+}
