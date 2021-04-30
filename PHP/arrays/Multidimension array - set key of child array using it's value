@@ -1,0 +1,44 @@
+$array = [
+  [
+    'id' => 54321,
+    'name' => 'example',
+    'note' => 'example no. 54321'
+  ],
+  [
+    'id' => 12345,
+    'name' => 'foo',
+    'note' => 'example no. 12345'
+  ],
+  [
+    'id' => 11111,
+    'name' => 'bar',
+    'note' => 'example no. 11111'
+  ],
+];
+
+$array = array_combine(
+    array_column($array, 'id'),
+    $array
+);
+
+//Array after transformation: 
+//
+//    [
+//      '54321' => [
+//        'id' => 54321,
+//        'name' => 'example',
+//        'note' => 'example no. 54321'
+//      ],
+//      
+//      '12345' => [
+//        'id' => 12345,
+//        'name' => 'foo',
+//        'note' => 'example no. 12345'
+//      ],
+//      
+//      '11111' => [
+//        'id' => 11111,
+//        'name' => 'bar',
+//        'note' => 'example no. 11111'
+//      ],
+//    ]
